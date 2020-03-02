@@ -1,0 +1,61 @@
+.div1{
+  width: 50%;
+
+  background-color: blue;
+  display: inline-block;
+}
+.div2{
+  width: 50%;
+  float: right;
+  background-color:red;
+  display: inline-block;
+}
+
+.div3{
+  width: 100%;
+  float: right;
+  background-color:green;
+  display:none;
+
+}
+.div1:hover  {
+transform: rotateX(180deg);
+transition: visibility 0.5s, transform 1s;
+background-color: red;
+}
+.div2:hover  {
+transform: rotateX(180deg);
+transition: visibility 0.5s, transform 1s;
+background-color: blue;
+}
+.div3:hover  {
+transform: rotateX(180deg);
+transition: visibility 0.5s, transform 1s;
+background-color: orange;
+}
+
+
+
+
+@media (max-width:400px) {
+  .div1{
+    width: 100%;
+
+    background-color: blue;
+    display:block;
+  }
+  .div2{
+    width: 100%;
+    float: right;
+    background-color:red;
+    display:block;
+  }
+.div3{
+  width: 100%;
+  float: right;
+  background-color:green;
+  display:block;
+
+}
+
+}
