@@ -71,8 +71,11 @@
     <td class="tg-0lax" id="td24" onmouseover="td24Color()" onmouseout="td24ColorWhite()"></td>
   </tr>
 </table>
+<input id="pInvisible" style="display:block" value=""></input>
 <button type="button" name="button" onclick="changeColorTag()"></button>
 <button type="button" name="button" onclick="colorChange()">rojo</button>
+<input type="color" name="" value="" id="sColor" onmouseout="inputColor()">
+<button type="button" name="button" onclick="botonColor()">color elegido</button>
     <script type="text/javascript" src="jquery.js">
 
 
@@ -91,6 +94,27 @@
 
   </script>
   <script type="text/javascript">
+
+
+  function inputColor() {
+    sColorC=document.getElementById("sColor").value;
+    document.getElementById("pInvisible").value=sColorC;
+
+  }
+
+  function botonColor() {
+    // document.getElementById("*td").style.backgroundColor=sColorC;
+    // document.getElementsByTagName("TD").style.backgroundColor="red";
+    var list = document.getElementsByTagName("TD");
+    var array=[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23];
+    var i;
+    for (i = 0; i < array.length; i++) {
+    list[i].style.backgroundColor=sColorC;
+    }
+
+
+  }
+
   function colorChange(){
 document.getElementById('td24').style.backgroundColor="red";
 document.getElementById('td23').style.backgroundColor="red";
@@ -116,7 +140,7 @@ document.getElementById('td4').style.backgroundColor="red";
 document.getElementById('td3').style.backgroundColor="red";
 document.getElementById('td2').style.backgroundColor="red";
 document.getElementById('td1').style.backgroundColor="red";
-
+window.alert(document.getElementById("sColor").value)
   }
   function changeColorTag(){
     // document.getElementsByTagName("TD").style.backgroundColor="red";
